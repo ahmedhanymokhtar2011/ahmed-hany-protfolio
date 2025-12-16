@@ -8,6 +8,7 @@ import { StarBackground } from "../components/StarBackground"
 import { ThemeToggle } from "../components/ThemeToggle"
 import { Footer } from "../components/Footer";
 export const Home = () => {
+    
     return <div className="min-h-container bg-background text-foreground overflow-x-hidden">
 
         <ThemeToggle />

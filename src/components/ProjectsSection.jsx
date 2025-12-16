@@ -1,5 +1,4 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-
 export const ProjectsSection = () => {
     const projects = [
         {
