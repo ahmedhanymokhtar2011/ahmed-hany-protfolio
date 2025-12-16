@@ -1,11 +1,17 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import ecommerceImg from '../public/projects/ecommerce.png';
+import azkaryImg from '../public/projects/azkary.png';
+import weatherImg from '../public/projects/weather.png';
+import foodImg from '../public/projects/food.png';
+import gameImg from '../public/projects/game.png';
+
 export const ProjectsSection = () => {
     const projects = [
         {
             id: 1,
             title: "TOPICO-Ecommerce using-react",
             description: "it is a ecommerce website about online store using react.js",
-            image: "/public/projects/ecommerce.png",
+            image: ecommerceImg,
             tags: ["React"],
             demoUrl: "https://ahmedhanymokhtar2011.github.io/TOPICO-ecommerce-using-react.js/",
             githubUrl: "https://github.com/ahmedhanymokhtar2011/TOPICO-ecommerce-using-react.js",
@@ -15,7 +21,7 @@ export const ProjectsSection = () => {
             title: "Azkary",
             description:
                 "azkary app is for muslims who wants to read 'azkar' .",
-            image: "/public/projects/azkary.png",
+            image: azkaryImg,
             tags: ["HTML", "CSS", "Javascript"],
             demoUrl: "https://ahmedhanymokhtar2011.github.io/azkary/",
             githubUrl: "https://github.com/ahmedhanymokhtar2011/azkary",
@@ -25,7 +31,7 @@ export const ProjectsSection = () => {
             title: "weather app",
             description:
                 "it is weather app for cities of all world.",
-            image: "/public/projects/wheather.png",
+            image: weatherImg,
             tags: ["HTML", "CSS", "Javascript"],
             demoUrl: "https://ahmedhanymokhtar2011.github.io/weather-app/",
             githubUrl: "https://github.com/ahmedhanymokhtar2011/weather-app",
@@ -35,7 +41,7 @@ export const ProjectsSection = () => {
             title: "food restaurant app",
             description:
                 "it is a simple food restaurant app using html & tailwind css",
-            image: "/public/projects/food.png",
+            image: foodImg,
             tags: ["HTML", "tailwindcss"],
             demoUrl: "https://ahmedhanymokhtar2011.github.io/food-restaurant/",
             githubUrl: "https://github.com/ahmedhanymokhtar2011/food-restaurant",
@@ -45,7 +51,7 @@ export const ProjectsSection = () => {
             title: "game center app",
             description:
                 "🎮 A modern gaming hub with fun mini-games: test your memory, play Tic Tac Toe, and challenge yourself with Hangman — quick, simple, and exciting!",
-            image: "/public/projects/game.png",
+            image: gameImg,
             tags: ["HTML", "CSS", "Javascript"],
             demoUrl: "https://ahmedhanymokhtar2011.github.io/game-center/",
             githubUrl: "https://github.com/ahmedhanymokhtar2011/game-center",
