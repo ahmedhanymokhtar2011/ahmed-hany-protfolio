@@ -1,9 +1,9 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import ecommerceImg from '../public/projects/ecommerce.png';
-import azkaryImg from '../public/projects/azkary.png';
-import weatherImg from '../public/projects/weather.png';
-import foodImg from '../public/projects/food.png';
-import gameImg from '../public/projects/game.png';
+import ecommerceImg from '../../public/projects/ecommerce.png';
+import azkaryImg from '../../public/projects/azkary.png';
+import weatherImg from '../../public/projects/wheather.png';
+import foodImg from '../../public/projects/food.png';
+import gameImg from '../../public/projects/game.png';
 
 export const ProjectsSection = () => {
     const projects = [
