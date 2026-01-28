@@ -17,8 +17,6 @@ export const AboutSection = () => {
 
 
 
-                    <p className="text-muted-foreground"> I am a passionate Front-End Developer specializing in HTML, CSS, JavaScript, React, and Tailwind CSS. I focus on building modern, responsive, and user-friendly websites, and I’m always eager to learn new technologies and improve my skills.
-                    </p>
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                         <a href="#contact" className=" consmic-button">
                             Get in Touch
