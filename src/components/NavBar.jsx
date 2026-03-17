@@ -3,10 +3,10 @@ import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const navItems = [
- { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
 ]
 export const NavBar = () => {
@@ -22,8 +22,9 @@ export const NavBar = () => {
     }, [])
     return (
         <nav
+            data-aos="zoom-in"
             className={cn("fixed w-full  z-40 transition-all duration-300",
-               
+
                 isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5")}>
             <div className='container flex items-center justify-between'>
                 <a className='text-xl font-bold text-primary flex items-center' href='#hero'>
@@ -49,8 +50,8 @@ export const NavBar = () => {
                 <button
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                     className='md:hidden p-2 text-foreground z-50 mr-6'
-                aria-label={isMenuOpen ? "close Menu": "Open Menu"}>
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    aria-label={isMenuOpen ? "close Menu" : "Open Menu"}>
+                    {isMenuOpen ? <X size={24} /> : <Menu  size={24} />}
                 </button>
 
 
@@ -60,12 +61,12 @@ export const NavBar = () => {
                         : "translate-x-full opacity-0 pointer-events-none"
                 )}>
                     <div className='flex flex-col space-y-8 text-xl mr-12'>
-                        {navItems.map((item,key) => (
+                        {navItems.map((item, key) => (
                             <a
                                 key={key}
                                 href={item.href}
-                            className='text-foreground/80 hover:text-primary transition-colors duration-300'
-                            onClick={()=>setIsMenuOpen(false)}
+                                className='text-foreground/80 hover:text-primary transition-colors duration-300'
+                                onClick={() => setIsMenuOpen(false)}
                             >
                                 {item.name}
                             </a>

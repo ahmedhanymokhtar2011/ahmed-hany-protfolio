@@ -23,11 +23,11 @@ const filteredSkills = skills.filter((skill) => activeCategory === "all" || skil
 
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-        <div className="container mx-auto max-w-5xl">
+        <div data-aos="fade-up" className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:4xl font-bold mb-12 text-center">
                 My <span className="text-primary">Skills</span>
             </h2>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div data-aos="fade-up" className="flex flex-wrap justify-center gap-4 mb-12">
                 {categories.map((category, key) => (
                     <button
                         key={key}
@@ -44,7 +44,7 @@ const filteredSkills = skills.filter((skill) => activeCategory === "all" || skil
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredSkills.map((skill, key) => (
-                    <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
+                    <div  data-aos="zoom-in" key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
                         <div className="text-left mb-4">
                             <h3 className="font-semibold text-lg">{skill.name}</h3>
                         </div>
