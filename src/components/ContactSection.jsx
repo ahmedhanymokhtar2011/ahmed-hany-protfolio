@@ -1,7 +1,29 @@
 import { Github, Linkedin, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react"
 import { cn } from '@/lib/utils'
-
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 export const ContactSection = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_bo33po6', 'template_fhaa02o', form.current, {
+                publicKey:'xW7KrSXoAQjC7WqiL',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    form.current.reset();
+                    alert("Message sent successfully!");
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
 
     return (
         <section
@@ -94,7 +116,11 @@ export const ContactSection = () => {
                     <div data-aos="fade-up" className="bg-card p-8 rounded-lg shadow-xs">
 
                         <h3 data-aos="fade-up" className="text-2xl font-semibold mb-6">Send a message</h3>
-                        <form className="space-y-6">
+                      {/*the form */}
+                        <form
+                            ref={form}
+                            onSubmit={sendEmail}
+                            className="space-y-6">
 
                             <div data-aos="zoom-in">
                                 <label
@@ -104,7 +130,7 @@ export const ContactSection = () => {
                                 <input
                                     type="text"
                                     id="name"
-                                    name="name"
+                                  name="name"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                                     placeholder="Your name here..."
@@ -119,7 +145,7 @@ export const ContactSection = () => {
                                 <input
                                     type="email"
                                     id="email"
-                                    name="email"
+                                  name="email"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                                     placeholder="Your email here..."
@@ -133,7 +159,7 @@ export const ContactSection = () => {
                                 >Your message</label>
                                 <textarea
                                     id="message"
-                                    name="message"
+                                   name="message"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                                     placeholder="Your message here..."
@@ -143,6 +169,7 @@ export const ContactSection = () => {
                             <button
                                 data-aos="fade-up"
                                 type="submit"
+                                value="Send"
                                 className={cn("consmic-button w-full flex items-center justify-center gap-2")}
                             >
                                 <Send size={16} />
