@@ -22,7 +22,7 @@ export const AboutSection = () => {
                             Get in Touch
                         </a>
 
-                        <a data-aos="fade-up" href="../../public/img/cv1.1.jpg" download="ahmedHany-cv" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                        <a data-aos="fade-up" href="../../public/img/cv1.1.jpeg" download="ahmedHany-cv" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
                             Download CV
                         </a>
 
